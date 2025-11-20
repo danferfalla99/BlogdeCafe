@@ -1,49 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BlogdeCafé</title>
-    <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preload" href="css/tailwind.css" as="style" />
+    <link rel="stylesheet" href="css/tailwind.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
       rel="stylesheet"
     />
     <link rel="icon" href="img/icon.ico" />
   </head>
-  <body>
-    <header class="header">
-      <div class="contenedor">
-        <div class="barra">
-          <a class="logo" href="index.html">
-            <h1 class="logo-nombre no-margin centrar-texto">
-              Blog<span class="logo-bold">deCafé</span>
+  <body
+    class="font-parrafos text-base leading-loose dark:bg-gray-900 dark:text-white"
+  >
+    <header
+      class="header bg-[url('../img/banner.webp')] bg-cover bg-center bg-no-repeat h-[60rem]"
+    >
+      <div class="contenedor max-w-[120rem] w-[90%] mx-auto">
+        <div class="barra pt-16 md:flex md:justify-between md:items-center">
+          <a class="logo text-blanco" href="index.html">
+            <h1
+              class="logo-nombre m-0 text-center font-heading text-5xl font-normal text-white"
+            >
+              Blog<span class="logo-bold font-bold">deCafé</span>
             </h1>
           </a>
-          <nav class="navegacion">
-            <a href="nosotros.html" class="navegacion-enlace">Nosotros</a>
-            <a href="cursos.html" class="navegacion-enlace">Cursos</a>
-            <a href="contacto.html" class="navegacion-enlace">Contacto</a>
+          <nav
+            class="navegacion mt-4 md:mt-0 flex flex-col md:flex-row gap-8 items-center"
+          >
+            <a
+              href="nosotros.html"
+              class="navegacion-enlace block text-center text-lg text-white hover:text-primario transition-colors"
+              >Nosotros</a
+            >
+            <a
+              href="cursos.html"
+              class="navegacion-enlace block text-center text-lg text-white hover:text-primario transition-colors"
+              >Cursos</a
+            >
+            <a
+              href="contacto.html"
+              class="navegacion-enlace block text-center text-lg text-white hover:text-primario transition-colors"
+              >Contacto</a
+            >
           </nav>
         </div>
       </div>
-      <div class="header-texto">
-        <h2 class="no-margin">Blog de café con consejos y cursos</h2>
-        <p class="no-margin">
+      <div class="header-texto text-center text-white mt-20 md:mt-60">
+        <h2 class="m-0 font-heading text-[40px] leading-tight">
+          Blog de café con consejos y cursos
+        </h2>
+        <p class="m-0 text-base">
           Aprende de los expertos con las mejores recetas y consejos
         </p>
       </div>
     </header>
-    <main class="contenedor">
-      <h3 class="centrar-texto">Sobre Nosotros</h3>
+    <main class="contenedor max-w-[120rem] w-[90%] mx-auto mt-16">
+      <h3 class="text-center font-heading text-[32px] mb-8 dark:text-white">
+        Sobre Nosotros
+      </h3>
 
-      <div class="sobre-nosotro">
-        <div class="sobre-nosotros-imagen">
-          <img src="img/nosotros.jpg" alt="imagen nosotros" />
+      <div class="sobre-nosotro md:flex md:justify-between md:gap-8">
+        <div
+          class="sobre-nosotros-imagen flex-basis-[calc(50%-1rem)] mb-8 md:mb-0"
+        >
+          <img src="img/nosotros.jpg" alt="imagen nosotros" class="w-full" />
         </div>
-        <div class="sobre-nosotros-texto">
-          <p>
+        <div class="sobre-nosotros-texto flex-basis-[calc(50%-1rem)]">
+          <p class="text-base dark:text-gray-300">
             ¡Bienvenidos a nuestro blog de café! Somos un equipo apasionado por
             todo lo relacionado con el mundo del café, y nuestro objetivo es
             compartir con ustedes nuestra amorosa dedicación a esta bebida
@@ -73,23 +99,38 @@
             el café, no dudes en ponerte en contacto con nosotros. ¡Estamos aquí
             para ayudarte a disfrutar cada taza al máximo!
           </p>
-          
         </div>
       </div>
     </main>
 
-    <footer class="footer">
-      <div class="contenedor">
-        <div class="barra">
-          <a class="logo" href="index.html">
-            <h1 class="logo-nombre no-margin centrar-texto">
-              Blog<span class="logo-bold">deCafé</span>
+    <footer class="footer bg-negro pb-12 mt-16 pt-12">
+      <div class="contenedor max-w-[120rem] w-[90%] mx-auto">
+        <div class="barra md:flex md:justify-between md:items-center">
+          <a class="logo text-blanco" href="index.html">
+            <h1
+              class="logo-nombre m-0 text-center font-heading text-5xl font-normal text-white"
+            >
+              Blog<span class="logo-bold font-bold">deCafé</span>
             </h1>
           </a>
-          <nav class="navegacion">
-            <a href="nosotros.html" class="navegacion-enlace">Nosotros</a>
-            <a href="cursos.html" class="navegacion-enlace">Cursos</a>
-            <a href="contacto.html" class="navegacion-enlace">Contacto</a>
+          <nav
+            class="navegacion mt-4 md:mt-0 flex flex-col md:flex-row gap-8 items-center"
+          >
+            <a
+              href="nosotros.html"
+              class="navegacion-enlace block text-center text-lg text-white hover:text-primario transition-colors"
+              >Nosotros</a
+            >
+            <a
+              href="cursos.html"
+              class="navegacion-enlace block text-center text-lg text-white hover:text-primario transition-colors"
+              >Cursos</a
+            >
+            <a
+              href="contacto.html"
+              class="navegacion-enlace block text-center text-lg text-white hover:text-primario transition-colors"
+              >Contacto</a
+            >
           </nav>
         </div>
       </div>

@@ -1,78 +1,151 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BlogdeCafé</title>
-    <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preload" href="css/tailwind.css" as="style" />
+    <link rel="stylesheet" href="css/tailwind.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
       rel="stylesheet"
     />
     <link rel="icon" href="img/icon.ico" />
   </head>
-  <body>
-    <header class="header">
-      <div class="contenedor">
-        <div class="barra">
-          <a class="logo" href="index.html">
-            <h1 class="logo-nombre no-margin centrar-texto">
-              Blog<span class="logo-bold">deCafé</span>
+  <body
+    class="font-parrafos text-base leading-loose dark:bg-gray-900 dark:text-white"
+  >
+    <header
+      class="header bg-[url('../img/banner.webp')] bg-cover bg-center bg-no-repeat h-[60rem]"
+    >
+      <div class="contenedor max-w-[120rem] w-[90%] mx-auto">
+        <div class="barra pt-16 md:flex md:justify-between md:items-center">
+          <a class="logo text-blanco" href="index.html">
+            <h1
+              class="logo-nombre m-0 text-center font-heading text-5xl font-normal text-white"
+            >
+              Blog<span class="logo-bold font-bold">deCafé</span>
             </h1>
           </a>
-          <nav class="navegacion">
-            <a href="nosotros.html" class="navegacion-enlace">Nosotros</a>
-            <a href="cursos.html" class="navegacion-enlace">Cursos</a>
-            <a href="contacto.html" class="navegacion-enlace">Contacto</a>
+          <nav
+            class="navegacion mt-4 md:mt-0 flex flex-col md:flex-row gap-8 items-center"
+          >
+            <a
+              href="nosotros.html"
+              class="navegacion-enlace block text-center text-lg text-white hover:text-primario transition-colors"
+              >Nosotros</a
+            >
+            <a
+              href="cursos.html"
+              class="navegacion-enlace block text-center text-lg text-white hover:text-primario transition-colors"
+              >Cursos</a
+            >
+            <a
+              href="contacto.html"
+              class="navegacion-enlace block text-center text-lg text-white hover:text-primario transition-colors"
+              >Contacto</a
+            >
           </nav>
         </div>
       </div>
-      <div class="header-texto">
-        <h2 class="no-margin">Blog de café con consejos y cursos</h2>
-        <p class="no-margin">
+      <div class="header-texto text-center text-white mt-20 md:mt-60">
+        <h2 class="m-0 font-heading text-[40px] leading-tight">
+          Blog de café con consejos y cursos
+        </h2>
+        <p class="m-0 text-base">
           Aprende de los expertos con las mejores recetas y consejos
         </p>
       </div>
     </header>
-    <main class="contenedor">
-      <h3 class="centrar-texto">Contacto</h3>
-      <div class="contacto-bg"></div>
+    <main class="contenedor max-w-[120rem] w-[90%] mx-auto mt-16">
+      <h3 class="text-center font-heading text-[32px] mb-8 dark:text-white">
+        Contacto
+      </h3>
+      <div
+        class="contacto-bg bg-[url('../img/contacto.jpg')] h-[40rem] bg-cover bg-center bg-no-repeat"
+      ></div>
 
-      <form class="formulario">
-        <div class="campo">
-          <label class="campo-label" for="nombre">Nombre</label>
-          <input class="campo-field" type="text" placeholder="Tu Nombre" id="nombre" />
+      <form
+        class="formulario bg-white p-12 md:w-[95%] md:mx-auto md:-mt-20 md:p-20 shadow-lg dark:bg-gray-800"
+      >
+        <div class="campo flex mb-8 items-center">
+          <label
+            class="campo-label flex-[0_0_9rem] text-right pr-8 font-heading font-bold dark:text-white"
+            for="nombre"
+            >Nombre</label
+          >
+          <input
+            class="campo-field flex-1 border border-gris p-4 rounded dark:bg-gray-700 dark:text-white dark:border-gray-600"
+            type="text"
+            placeholder="Tu Nombre"
+            id="nombre"
+          />
         </div>
 
-        <div class="campo">
-          <label class="campo-label" for="email">E-mail</label>
-          <input class="campo-field" type="email" placeholder="Tu Correo" id="email" />
+        <div class="campo flex mb-8 items-center">
+          <label
+            class="campo-label flex-[0_0_9rem] text-right pr-8 font-heading font-bold dark:text-white"
+            for="email"
+            >E-mail</label
+          >
+          <input
+            class="campo-field flex-1 border border-gris p-4 rounded dark:bg-gray-700 dark:text-white dark:border-gray-600"
+            type="email"
+            placeholder="Tu Correo"
+            id="email"
+          />
         </div>
 
-        <div class="campo">
-          <label class="campo-label" for="mensaje">Mensaje</label>
-          <textarea class="campo-field campo-field-textarea" id="mensaje"></textarea>
+        <div class="campo flex mb-8 items-center">
+          <label
+            class="campo-label flex-[0_0_9rem] text-right pr-8 font-heading font-bold dark:text-white"
+            for="mensaje"
+            >Mensaje</label
+          >
+          <textarea
+            class="campo-field campo-field-textarea flex-1 border border-gris p-4 h-40 rounded dark:bg-gray-700 dark:text-white dark:border-gray-600"
+            id="mensaje"
+          ></textarea>
         </div>
 
-        <div class="campo">
-          <input type="submit" value="Enviar" class="boton boton-primario" />
+        <div class="campo flex justify-end">
+          <input
+            type="submit"
+            value="Enviar"
+            class="boton boton-primario bg-negro text-white py-4 px-12 uppercase font-bold text-lg hover:cursor-pointer inline-block dark:bg-primario dark:hover:bg-opacity-90"
+          />
         </div>
       </form>
     </main>
 
-    <footer class="footer">
-      <div class="contenedor">
-        <div class="barra">
-          <a class="logo" href="index.html">
-            <h1 class="logo-nombre no-margin centrar-texto">
-              Blog<span class="logo-bold">deCafé</span>
+    <footer class="footer bg-negro pb-12 mt-16 pt-12">
+      <div class="contenedor max-w-[120rem] w-[90%] mx-auto">
+        <div class="barra md:flex md:justify-between md:items-center">
+          <a class="logo text-blanco" href="index.html">
+            <h1
+              class="logo-nombre m-0 text-center font-heading text-5xl font-normal text-white"
+            >
+              Blog<span class="logo-bold font-bold">deCafé</span>
             </h1>
           </a>
-          <nav class="navegacion">
-            <a href="nosotros.html" class="navegacion-enlace">Nosotros</a>
-            <a href="cursos.html" class="navegacion-enlace">Cursos</a>
-            <a href="contacto.html" class="navegacion-enlace">Contacto</a>
+          <nav
+            class="navegacion mt-4 md:mt-0 flex flex-col md:flex-row gap-8 items-center"
+          >
+            <a
+              href="nosotros.html"
+              class="navegacion-enlace block text-center text-lg text-white hover:text-primario transition-colors"
+              >Nosotros</a
+            >
+            <a
+              href="cursos.html"
+              class="navegacion-enlace block text-center text-lg text-white hover:text-primario transition-colors"
+              >Cursos</a
+            >
+            <a
+              href="contacto.html"
+              class="navegacion-enlace block text-center text-lg text-white hover:text-primario transition-colors"
+              >Contacto</a
+            >
           </nav>
         </div>
       </div>
