@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BlogdeCafé</title>
+    <title>BlogdeCafé - Sobre Nosotros</title>
     <link rel="preload" href="css/tailwind.css" as="style" />
     <link rel="stylesheet" href="css/tailwind.css" />
     <link
@@ -13,126 +13,135 @@
     <link rel="icon" href="img/icon.ico" />
   </head>
   <body
-    class="font-parrafos text-base leading-loose dark:bg-gray-900 dark:text-white"
+    class="font-parrafos text-base leading-loose bg-gray-50 dark:bg-gray-900 dark:text-white transition-colors duration-300"
   >
     <header
-      class="header bg-[url('../img/banner.webp')] bg-cover bg-center bg-no-repeat h-[60rem]"
+      class="header relative bg-[url('../img/banner.webp')] bg-cover bg-center bg-no-repeat h-[60rem] flex flex-col justify-center"
     >
-      <div class="contenedor max-w-[120rem] w-[90%] mx-auto">
-        <div class="barra pt-16 md:flex md:justify-between md:items-center">
-          <a class="logo text-blanco" href="index.html">
+      <div class="absolute inset-0 bg-black/50"></div>
+      <!-- Overlay -->
+      <div
+        class="contenedor relative z-10 max-w-[120rem] w-[90%] mx-auto h-full flex flex-col"
+      >
+        <div class="barra pt-12 md:flex md:justify-between md:items-center">
+          <a class="logo text-blanco group" href="index.html">
             <h1
-              class="logo-nombre m-0 text-center font-heading text-5xl font-normal text-white"
+              class="logo-nombre m-0 text-center font-heading text-5xl font-normal text-white group-hover:scale-105 transition-transform duration-300"
             >
               Blog<span class="logo-bold font-bold">deCafé</span>
             </h1>
           </a>
           <nav
-            class="navegacion mt-4 md:mt-0 flex flex-col md:flex-row gap-8 items-center"
+            class="navegacion mt-8 md:mt-0 flex flex-col md:flex-row gap-8 items-center"
           >
             <a
               href="nosotros.html"
-              class="navegacion-enlace block text-center text-lg text-white hover:text-primario transition-colors"
+              class="navegacion-enlace block text-center text-lg text-white hover:text-primario transition-colors duration-300 border-b-2 border-transparent hover:border-primario pb-1"
               >Nosotros</a
             >
             <a
               href="cursos.html"
-              class="navegacion-enlace block text-center text-lg text-white hover:text-primario transition-colors"
+              class="navegacion-enlace block text-center text-lg text-white hover:text-primario transition-colors duration-300 border-b-2 border-transparent hover:border-primario pb-1"
               >Cursos</a
             >
             <a
               href="contacto.html"
-              class="navegacion-enlace block text-center text-lg text-white hover:text-primario transition-colors"
+              class="navegacion-enlace block text-center text-lg text-white hover:text-primario transition-colors duration-300 border-b-2 border-transparent hover:border-primario pb-1"
               >Contacto</a
             >
           </nav>
         </div>
-      </div>
-      <div class="header-texto text-center text-white mt-20 md:mt-60">
-        <h2 class="m-0 font-heading text-[40px] leading-tight">
-          Blog de café con consejos y cursos
-        </h2>
-        <p class="m-0 text-base">
-          Aprende de los expertos con las mejores recetas y consejos
-        </p>
+        <div class="header-texto text-center text-white mt-auto mb-20 md:mb-32">
+          <h2
+            class="m-0 font-heading text-[40px] md:text-6xl leading-tight drop-shadow-lg"
+          >
+            Blog de café con consejos y cursos
+          </h2>
+          <p class="m-0 text-lg md:text-xl mt-4 font-light drop-shadow-md">
+            Aprende de los expertos con las mejores recetas y consejos
+          </p>
+        </div>
       </div>
     </header>
-    <main class="contenedor max-w-[120rem] w-[90%] mx-auto mt-16">
-      <h3 class="text-center font-heading text-[32px] mb-8 dark:text-white">
+
+    <main class="contenedor max-w-[120rem] w-[90%] mx-auto mt-16 mb-16">
+      <h3
+        class="text-center font-heading text-4xl mb-12 dark:text-white border-b-4 border-primario inline-block pb-2 mx-auto"
+      >
         Sobre Nosotros
       </h3>
 
-      <div class="sobre-nosotro md:flex md:justify-between md:gap-8">
-        <div
-          class="sobre-nosotros-imagen flex-basis-[calc(50%-1rem)] mb-8 md:mb-0"
-        >
-          <img src="img/nosotros.jpg" alt="imagen nosotros" class="w-full" />
+      <div
+        class="sobre-nosotro md:flex md:justify-between md:gap-12 items-center"
+      >
+        <div class="sobre-nosotros-imagen flex-1 mb-8 md:mb-0">
+          <img
+            src="img/nosotros.jpg"
+            alt="imagen nosotros"
+            class="w-full rounded-2xl shadow-xl hover:scale-105 transition-transform duration-500 object-cover"
+          />
         </div>
-        <div class="sobre-nosotros-texto flex-basis-[calc(50%-1rem)]">
-          <p class="text-base dark:text-gray-300">
+        <div
+          class="sobre-nosotros-texto flex-1 bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg"
+        >
+          <p
+            class="text-base text-gray-600 dark:text-gray-300 leading-relaxed mb-4"
+          >
             ¡Bienvenidos a nuestro blog de café! Somos un equipo apasionado por
             todo lo relacionado con el mundo del café, y nuestro objetivo es
             compartir con ustedes nuestra amorosa dedicación a esta bebida
             icónica. Desde nuestras primeras tazas hasta nuestras exploraciones
             más profundas en técnicas de preparación y variedades de granos,
             nuestro viaje en el mundo del café ha sido una experiencia
-            enriquecedora que estamos emocionados de compartir. En nuestro blog,
-            nos dedicamos a ofrecer información valiosa y práctica tanto para
-            los aficionados al café experimentados como para los principiantes.
-            Abordamos una amplia gama de temas, desde los diferentes tipos de
-            granos de café y sus perfiles de sabor, hasta técnicas de extracción
-            y recetas fáciles de seguir que pueden transformar tu rutina diaria.
-            Creemos que cada taza de café tiene el potencial de ser una
-            experiencia única y memorable, y nos esforzamos por proporcionar
-            recursos que te ayuden a apreciar cada sorbo al máximo. Nuestro
-            equipo está compuesto por baristas, tostadores y entusiastas del
-            café que aportan sus conocimientos y experiencias para ofrecerte
-            contenido relevante y actualizado. Nos encanta experimentar con
-            nuevos métodos de preparación y explorar las últimas tendencias en
-            el mundo del café, y estamos comprometidos a mantenernos al día con
-            las innovaciones y técnicas emergentes en la industria. Esperamos
-            que encuentres en nuestro blog no solo inspiración y consejos
-            prácticos, sino también una comunidad de personas que comparten tu
-            pasión por el café. ¡Gracias por acompañarnos en este viaje y por
-            permitirnos ser parte de tu experiencia cafetera! Si tienes
-            preguntas, sugerencias o simplemente quieres compartir tu amor por
-            el café, no dudes en ponerte en contacto con nosotros. ¡Estamos aquí
-            para ayudarte a disfrutar cada taza al máximo!
+            enriquecedora que estamos emocionados de compartir.
+          </p>
+          <p class="text-base text-gray-600 dark:text-gray-300 leading-relaxed">
+            En nuestro blog, nos dedicamos a ofrecer información valiosa y
+            práctica tanto para los aficionados al café experimentados como para
+            los principiantes. Abordamos una amplia gama de temas, desde los
+            diferentes tipos de granos de café y sus perfiles de sabor, hasta
+            técnicas de extracción y recetas fáciles de seguir que pueden
+            transformar tu rutina diaria.
           </p>
         </div>
       </div>
     </main>
 
-    <footer class="footer bg-negro pb-12 mt-16 pt-12">
+    <footer
+      class="footer bg-negro pb-12 mt-16 pt-12 border-t-4 border-primario"
+    >
       <div class="contenedor max-w-[120rem] w-[90%] mx-auto">
         <div class="barra md:flex md:justify-between md:items-center">
-          <a class="logo text-blanco" href="index.html">
+          <a class="logo text-blanco group" href="index.html">
             <h1
-              class="logo-nombre m-0 text-center font-heading text-5xl font-normal text-white"
+              class="logo-nombre m-0 text-center font-heading text-4xl font-normal text-white group-hover:text-primario transition-colors duration-300"
             >
               Blog<span class="logo-bold font-bold">deCafé</span>
             </h1>
           </a>
           <nav
-            class="navegacion mt-4 md:mt-0 flex flex-col md:flex-row gap-8 items-center"
+            class="navegacion mt-8 md:mt-0 flex flex-col md:flex-row gap-8 items-center"
           >
             <a
               href="nosotros.html"
-              class="navegacion-enlace block text-center text-lg text-white hover:text-primario transition-colors"
+              class="navegacion-enlace block text-center text-lg text-white hover:text-primario transition-colors duration-300"
               >Nosotros</a
             >
             <a
               href="cursos.html"
-              class="navegacion-enlace block text-center text-lg text-white hover:text-primario transition-colors"
+              class="navegacion-enlace block text-center text-lg text-white hover:text-primario transition-colors duration-300"
               >Cursos</a
             >
             <a
               href="contacto.html"
-              class="navegacion-enlace block text-center text-lg text-white hover:text-primario transition-colors"
+              class="navegacion-enlace block text-center text-lg text-white hover:text-primario transition-colors duration-300"
               >Contacto</a
             >
           </nav>
         </div>
+        <p class="text-center text-gray-400 mt-10 text-sm">
+          Todos los derechos reservados &copy; 2025
+        </p>
       </div>
     </footer>
   </body>

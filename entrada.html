@@ -3,7 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BlogdeCafé</title>
+    <title>BlogdeCafé - Tipos de Grano de Café</title>
+    <meta
+      name="description"
+      content="Descubre los diferentes tipos de granos de café: Arábica, Robusta y Liberica. Aprende sobre sus características y sabores únicos."
+    />
+    <meta
+      name="keywords"
+      content="granos de café, arábica, robusta, liberica, tipos de café"
+    />
+    <meta property="og:title" content="Tipos de Grano de Café - BlogdeCafé" />
+    <meta
+      property="og:description"
+      content="En el mundo del café, la variedad de granos es tan diversa como sus sabores"
+    />
+    <meta property="og:type" content="article" />
     <link rel="preload" href="css/tailwind.css" as="style" />
     <link rel="stylesheet" href="css/tailwind.css" />
     <link
@@ -13,101 +27,318 @@
     <link rel="icon" href="img/icon.ico" />
   </head>
   <body
-    class="font-parrafos text-base leading-loose dark:bg-gray-900 dark:text-white"
+    class="font-parrafos text-base leading-loose bg-gray-50 dark:bg-gray-900 dark:text-white transition-colors duration-300"
   >
     <header
-      class="header bg-[url('../img/banner.webp')] bg-cover bg-center bg-no-repeat h-[60rem]"
+      class="header relative bg-[url('../img/banner.webp')] bg-cover bg-center bg-no-repeat h-[60rem] flex flex-col justify-center"
     >
-      <div class="contenedor max-w-[120rem] w-[90%] mx-auto">
-        <div class="barra pt-16 md:flex md:justify-between md:items-center">
-          <a class="logo text-blanco" href="index.html">
+      <div class="absolute inset-0 bg-black/50"></div>
+      <!-- Overlay -->
+      <div
+        class="contenedor relative z-10 max-w-[120rem] w-[90%] mx-auto h-full flex flex-col"
+      >
+        <div class="barra pt-12 md:flex md:justify-between md:items-center">
+          <a class="logo text-blanco group" href="index.html">
             <h1
-              class="logo-nombre m-0 text-center font-heading text-5xl font-normal text-white"
+              class="logo-nombre m-0 text-center font-heading text-5xl font-normal text-white group-hover:scale-105 transition-transform duration-300"
             >
               Blog<span class="logo-bold font-bold">deCafé</span>
             </h1>
           </a>
-          <nav
-            class="navegacion mt-4 md:mt-0 flex flex-col md:flex-row gap-8 items-center"
-          >
+
+          <!-- Navegación Desktop -->
+          <nav class="navegacion hidden md:flex md:flex-row gap-8 items-center">
             <a
               href="nosotros.html"
-              class="navegacion-enlace block text-center text-lg text-white hover:text-primario transition-colors"
+              class="navegacion-enlace block text-center text-lg text-white hover:text-primario-light transition-all duration-300 border-b-2 border-transparent hover:border-primario-light pb-1"
               >Nosotros</a
             >
             <a
               href="cursos.html"
-              class="navegacion-enlace block text-center text-lg text-white hover:text-primario transition-colors"
+              class="navegacion-enlace block text-center text-lg text-white hover:text-primario-light transition-all duration-300 border-b-2 border-transparent hover:border-primario-light pb-1"
               >Cursos</a
             >
             <a
               href="contacto.html"
-              class="navegacion-enlace block text-center text-lg text-white hover:text-primario transition-colors"
+              class="navegacion-enlace block text-center text-lg text-white hover:text-primario-light transition-all duration-300 border-b-2 border-transparent hover:border-primario-light pb-1"
               >Contacto</a
             >
+
+            <!-- Dark Mode Toggle -->
+            <button
+              id="dark-mode-toggle"
+              class="p-2 rounded-lg bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-all duration-300 group/toggle"
+              aria-label="Toggle dark mode"
+            >
+              <svg
+                class="w-6 h-6 text-white group-hover/toggle:text-primario-light transition-colors"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  class="dark:hidden"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+                />
+                <path
+                  class="hidden dark:block"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+                />
+              </svg>
+            </button>
           </nav>
+
+          <!-- Mobile Menu Toggle -->
+          <div class="flex md:hidden gap-4 items-center mt-8">
+            <button
+              id="dark-mode-toggle"
+              class="p-2 rounded-lg bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-all duration-300"
+              aria-label="Toggle dark mode"
+            >
+              <svg
+                class="w-6 h-6 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  class="dark:hidden"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+                />
+                <path
+                  class="hidden dark:block"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+                />
+              </svg>
+            </button>
+
+            <button
+              id="mobile-menu-btn"
+              class="p-2 rounded-lg bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-all duration-300"
+              aria-label="Abrir menú"
+            >
+              <svg
+                class="w-6 h-6 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </div>
         </div>
-      </div>
-      <div class="header-texto text-center text-white mt-20 md:mt-60">
-        <h2 class="m-0 font-heading text-[40px] leading-tight">
-          Blog de café con consejos y cursos
-        </h2>
-        <p class="m-0 text-base">
-          Aprende de los expertos con las mejores recetas y consejos
-        </p>
+
+        <!-- Mobile Menu Overlay -->
+        <div
+          id="mobile-menu"
+          class="hidden fixed inset-0 bg-black/80 backdrop-blur-sm z-50 md:hidden items-center justify-center"
+        >
+          <div
+            class="bg-cafe-espresso dark:bg-gray-900 rounded-2xl p-8 mx-4 max-w-md w-full shadow-2xl animate-fade-in-up"
+          >
+            <div class="flex justify-between items-center mb-8">
+              <h2 class="text-2xl font-heading text-white">Menú</h2>
+              <button
+                id="mobile-menu-close"
+                class="p-2 rounded-lg bg-white/10 hover:bg-white/20 transition-all duration-300"
+                aria-label="Cerrar menú"
+              >
+                <svg
+                  class="w-6 h-6 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+            </div>
+            <nav class="flex flex-col gap-6">
+              <a
+                href="index.html"
+                class="text-xl text-white hover:text-primario-light transition-colors duration-300 py-3 px-4 rounded-lg hover:bg-white/10"
+                >Inicio</a
+              >
+              <a
+                href="nosotros.html"
+                class="text-xl text-white hover:text-primario-light transition-colors duration-300 py-3 px-4 rounded-lg hover:bg-white/10"
+                >Nosotros</a
+              >
+              <a
+                href="cursos.html"
+                class="text-xl text-white hover:text-primario-light transition-colors duration-300 py-3 px-4 rounded-lg hover:bg-white/10"
+                >Cursos</a
+              >
+              <a
+                href="contacto.html"
+                class="text-xl text-white hover:text-primario-light transition-colors duration-300 py-3 px-4 rounded-lg hover:bg-white/10"
+                >Contacto</a
+              >
+            </nav>
+          </div>
+        </div>
+        <div class="header-texto text-center text-white mt-auto mb-20 md:mb-32">
+          <h2
+            class="m-0 font-heading text-[40px] md:text-6xl leading-tight drop-shadow-lg"
+          >
+            Blog de café con consejos y cursos
+          </h2>
+          <p class="m-0 text-lg md:text-xl mt-4 font-light drop-shadow-md">
+            Aprende de los expertos con las mejores recetas y consejos
+          </p>
+        </div>
       </div>
     </header>
-    <main class="contenedor max-w-[120rem] w-[90%] mx-auto mt-16">
-      <h3 class="text-center font-heading text-[32px] mb-8 dark:text-white">
-        Sobre Nosotros
+
+    <main
+      class="contenedor max-w-[80rem] w-[90%] mx-auto mt-16 mb-16 bg-white dark:bg-gray-800 p-8 md:p-16 rounded-2xl shadow-xl"
+    >
+      <h3
+        class="text-center font-heading text-4xl md:text-5xl mb-12 dark:text-white pb-6 border-b-4 border-primario inline-block animate-fade-in-down"
+      >
+        Tipos de Grano de Café
       </h3>
-      <img src="img/blog1.jpg" alt="imagen de blog" class="w-full mb-8" />
-      <p class="text-base dark:text-gray-300">
-        En el mundo del café, la variedad de granos es tan diversa como sus
-        sabores. Los granos de café se dividen en tres tipos principales:
-        Arábica, Robusta y Liberica. El Arábica es conocido por su sabor suave y
-        complejo, con notas que van desde frutas hasta nueces, y es apreciado
-        por su acidez equilibrada. El Robusta, por otro lado, ofrece un perfil
-        más fuerte y amargo, con un toque terroso y una mayor cantidad de
-        cafeína, ideal para quienes prefieren un café más robusto y con cuerpo.
-        Finalmente, el Liberica, aunque menos común, aporta un sabor distintivo
-        y afrutado, con un toque algo floral. Cada tipo de grano contribuye a
-        una experiencia única, permitiendo a los amantes del café explorar una
-        gama de sabores y aromas.
-      </p>
+
+      <div
+        class="mb-12 overflow-hidden rounded-2xl shadow-2xl animate-fade-in-up"
+      >
+        <div class="relative group">
+          <img
+            src="img/blog1.jpg"
+            alt="imagen de blog"
+            class="w-full group-hover:scale-105 transition-transform duration-700"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-primario/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+          ></div>
+        </div>
+      </div>
+
+      <div
+        class="prose prose-lg dark:prose-invert max-w-none animate-fade-in-up"
+      >
+        <div
+          class="bg-primario-50 dark:bg-primario-900/20 border-l-4 border-primario p-6 rounded-r-lg mb-8"
+        >
+          <p
+            class="text-lg text-primario-dark dark:text-primario-light leading-relaxed font-medium mb-0"
+          >
+            💡 <strong>Dato interesante:</strong> El café es una de las bebidas
+            más consumidas en el mundo, y la variedad de sus granos determina su
+            sabor único.
+          </p>
+        </div>
+        <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+          En el mundo del café, la variedad de granos es tan diversa como sus
+          sabores. Los granos de café se dividen en tres tipos principales:
+          Arábica, Robusta y Liberica.
+        </p>
+        <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+          El <strong>Arábica</strong> es conocido por su sabor suave y complejo,
+          con notas que van desde frutas hasta nueces, y es apreciado por su
+          acidez equilibrada. Es el más popular y considerado de mayor calidad.
+        </p>
+        <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+          El <strong>Robusta</strong>, por otro lado, ofrece un perfil más
+          fuerte y amargo, con un toque terroso y una mayor cantidad de cafeína,
+          ideal para quienes prefieren un café más robusto y con cuerpo. Se
+          utiliza a menudo en mezclas de espresso para generar una buena crema.
+        </p>
+        <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+          Finalmente, el
+          <strong class="text-primario-dark dark:text-primario-light"
+            >Liberica</strong
+          >, aunque menos común, aporta un sabor distintivo y afrutado, con un
+          toque algo floral. Cada tipo de grano contribuye a una experiencia
+          única, permitiendo a los amantes del café explorar una gama de sabores
+          y aromas.
+        </p>
+
+        <div class="mt-12 pt-8 border-t-2 border-gray-200 dark:border-gray-700">
+          <a
+            href="index.html"
+            class="inline-flex items-center gap-2 bg-primario text-white py-3 px-8 uppercase font-bold text-sm rounded-xl shadow-md hover:bg-primario-dark hover:shadow-glow hover:-translate-y-1 transition-all duration-300"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M10 19l-7-7m0 0l7-7m-7 7h18"
+              />
+            </svg>
+            Volver al Blog
+          </a>
+        </div>
+      </div>
     </main>
 
-    <footer class="footer bg-negro pb-12 mt-16 pt-12">
+    <footer
+      class="footer bg-negro pb-12 mt-16 pt-12 border-t-4 border-primario"
+    >
       <div class="contenedor max-w-[120rem] w-[90%] mx-auto">
         <div class="barra md:flex md:justify-between md:items-center">
-          <a class="logo text-blanco" href="index.html">
+          <a class="logo text-blanco group" href="index.html">
             <h1
-              class="logo-nombre m-0 text-center font-heading text-5xl font-normal text-white"
+              class="logo-nombre m-0 text-center font-heading text-4xl font-normal text-white group-hover:text-primario transition-colors duration-300"
             >
               Blog<span class="logo-bold font-bold">deCafé</span>
             </h1>
           </a>
           <nav
-            class="navegacion mt-4 md:mt-0 flex flex-col md:flex-row gap-8 items-center"
+            class="navegacion mt-8 md:mt-0 flex flex-col md:flex-row gap-8 items-center"
           >
             <a
               href="nosotros.html"
-              class="navegacion-enlace block text-center text-lg text-white hover:text-primario transition-colors"
+              class="navegacion-enlace block text-center text-lg text-white hover:text-primario transition-colors duration-300"
               >Nosotros</a
             >
             <a
               href="cursos.html"
-              class="navegacion-enlace block text-center text-lg text-white hover:text-primario transition-colors"
+              class="navegacion-enlace block text-center text-lg text-white hover:text-primario transition-colors duration-300"
               >Cursos</a
             >
             <a
               href="contacto.html"
-              class="navegacion-enlace block text-center text-lg text-white hover:text-primario transition-colors"
+              class="navegacion-enlace block text-center text-lg text-white hover:text-primario transition-colors duration-300"
               >Contacto</a
             >
           </nav>
         </div>
+        <p class="text-center text-gray-400 mt-10 text-sm">
+          Todos los derechos reservados &copy; 2025
+        </p>
       </div>
     </footer>
+
+    <script src="js/app.js"></script>
   </body>
 </html>
