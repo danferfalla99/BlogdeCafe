@@ -1,3 +1,5 @@
 {
-    "liveServer.settings.port": 5501
+    "liveServer.settings.port": 5501,
+    "workbench.colorTheme": "Tokyo Night Light",
+    "editor.fontSize": 20
 }
